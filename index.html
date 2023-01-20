@@ -45,7 +45,7 @@
 
             <div class="text">
                 <h3>Destaques</h3>
-                <p>Frete grátis e chinelo de brinde é aqui, aproveite por tempo limitado.</p>
+                <p id="typed">Frete grátis e chinelo de brinde é aqui, aproveite por tempo limitado.</p>
             </div>
 
             <div class="images">
@@ -99,6 +99,21 @@
         </div>
     </main>
     <footer>Todos os direitos reservados.</footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        const sr = ScrollReveal({
+            origin: 'top',
+            distance: '50px',
+            duration: 2000,
+            reset: true
+        });
+
+
+        ScrollReveal().reveal('.container', { delay: 400 });
+        ScrollReveal().reveal('.card', { delay: 200 });
+    </script>
+
     <script src="./script.js"></script>
 </body>
 
