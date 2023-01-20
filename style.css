@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+header .head {
+  text-align: center;
+  padding: 15px;
+}
+
+header .one {
+  color: #fff;
+  background: #181818;
+}
+
+header .two h1 {
+  font-size: 24px;
+}
+
+header .sec-head {
+  position: relative;
+}
+
+header .img {
+  background: url(./image/wallpaper.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+  background-attachment: fixed;
+  filter: brightness(50%);
+  width: 100%;
+  height: 400px;
+}
+
+header .img img {
+  opacity: 0;
+}
+
+.sec-head .infos {
+  width: 450px;
+  position: absolute;
+  top: 45%;
+  left: 22%;
+  transform: translate(-45%, -22%);
+  z-index: 1;
+  color: #ebe9ea;
+}
+
+.sec-head .infos h2 {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.sec-head .infos p {
+  line-height: 24px;
+}
+
+.infos .infos-text {
+  border-right: 2px solid white;
+  animation: piscar 1s linear infinite, escrever normal 5s steps(55) both;
+  max-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.infos .text2 {
+  border-right: 2px solid white;
+  animation: piscar 1s 5s linear infinite, escrever normal 5s 5s steps(55) both;
+  max-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes piscar {
+  100% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes escrever {
+  100% {
+    max-width: 100%;
+  }
+}
+
+main .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+}
+
+main .container .text {
+  text-align: center;
+}
+
+main .container .text h3 {
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.container .images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #ebe9ea;
+  width: 250px;
+  transition: all 1s ease;
+}
+
+.card p {
+  text-align: center;
+  padding: 10px;
+  color: #313131;
+  transition: all 1s linear;
+  opacity: 0;
+}
+
+.images img {
+  width: 100%;
+  padding: 25px;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.images img:hover {
+  transform: scale(1.3);
+}
+
+footer {
+  background: #181818;
+  padding: 20px;
+  color: #ebe9ea;
+  text-align: center;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 1150px) {
+  header .img img {
+    opacity: 1;
+    width: 100%;
+    height: 400px;
+  }
+  main .container {
+    padding: 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .card {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .card {
+    width: 150px;
+  }
+
+  .sec-head .infos {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 482px) and (max-width: 767px) {
+  .sec-head .infos {
+    width: 250px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sec-head .infos {
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
