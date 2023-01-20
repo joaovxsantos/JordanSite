@@ -41,7 +41,7 @@ header .img img {
 }
 
 .sec-head .infos {
-  width: 450px;
+  /* width: 450px; */
   position: absolute;
   top: 45%;
   left: 22%;
@@ -53,9 +53,6 @@ header .img img {
 .sec-head .infos h2 {
   margin-bottom: 20px;
   font-size: 25px;
-}
-.sec-head .infos p {
-  line-height: 24px;
 }
 
 .infos .infos-text {
@@ -169,6 +166,22 @@ footer {
   .sec-head .infos {
     width: 300px;
   }
+  .infos .infos-text,
+  .infos .text2 {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sec-head .infos {
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .infos .infos-text,
+  .infos .text2 {
+    font-size: 11px;
+  }
 }
 
 @media screen and (min-width: 482px) and (max-width: 767px) {
@@ -178,13 +191,8 @@ footer {
     top: 50%;
     transform: translate(-50%, -50%);
   }
-}
-
-@media screen and (max-width: 500px) {
-  .sec-head .infos {
-    width: 300px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .infos .infos-text,
+  .infos .text2 {
+    font-size: 11px;
   }
 }
